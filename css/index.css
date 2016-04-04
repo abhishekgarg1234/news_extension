@@ -1,0 +1,168 @@
+#feed {
+    width: 376px;
+    height: 445px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.feeds {
+    width: 376px;
+}
+
+#cl1 {
+    cursor: pointer;
+}
+
+#cl2 {
+    cursor: pointer;
+    float: right;
+}
+
+.head_display {
+    width: 376px;
+    height: 43px;
+    color: black;
+    margin-bottom: 5px;
+    /*margin-bottom: 5px;*/
+    background-color: #863C3C;
+}
+
+.head_span {
+    color: white;
+    font: normal 16px/21px 'Arial', sans-serif;
+    /*font-weight: bold;*/
+    font-size: x-large;
+    margin-left: 110px;
+}
+
+.news_feed_div {
+    height: 120px;
+    width: 376px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.news_feed_anchor_tag {
+    color: blue;
+    text-decoration: none;
+}
+
+.news_feed_description_div {
+    max-height: 52px;
+    min-height: 50px;
+    overflow: hidden;
+    max-width: 260px;
+}
+
+.news_feed_title_div {
+    max-height: 51px;
+    max-width: 260px;
+    min-height: 25px;
+    padding-bottom: 3px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.news_feed_time_div {
+    text-align: right;
+    max-width: 260px;
+    opacity: 0.6;
+}
+
+.news_feed {
+    display: inline-block;
+    height: 120px;
+}
+
+.news_feed_image_div {
+    width: 90px;
+    height: 120px;
+    padding-right: 3px;
+}
+
+.title_div_without_description {
+    height: 71px;
+    max-width: 260px;
+    min-height: 25px;
+    padding-bottom: 3px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.loading {
+    background: #FFF url(images/loading.gif) no-repeat center center;
+    height: 100px;
+    width: 100px;
+}
+
+.slider_for_new_news {
+    width: 376px;
+    height: 43px;
+    background-color: #863C3C;
+    cursor: pointer;
+}
+
+#view_next {
+    float: right;
+    cursor: pointer;
+}
+
+#view_prev {
+    float: left;
+    cursor: pointer;
+}
+
+#bottom {
+    width: 376px;
+}
+
+.fl {
+    display: inline-block;
+}
+
+#bottom_display {
+    width: 376px;
+    height: 43px;
+    background-color: DarkSalmon;
+}
+
+.done {
+    cursor: pointer;
+    border: 2px solid black;
+    float: right;
+    margin-right: 25px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    padding-right: 3px;
+    padding-left: 3px;
+    background-color: #863C3C;
+    color: #DCD5D5;
+}
+
+.select_all {
+    cursor: pointer;
+    border: 2px solid black;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    padding-right: 3px;
+    padding-left: 3px;
+    background-color: #863C3C;
+    color: #DCD5D5;
+}
+
+#change_city {
+    margin-right: 6px;
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+.select_city {
+    height: 30px;
+}
+
+.checkbox_labels {
+    cursor: pointer;
+    display: inline-block;
+    width: 150px;
+    padding-left: 3px;
+}
