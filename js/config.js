@@ -2,11 +2,16 @@
     var config = {
         'head_displayId': 'head_display',
         'feedId': 'feed',
+        'aboutus_feed': 'aboutus_feed',
+        'twitter_feed': 'twitter_feed',
+        'twitter_tab': 'twitter_tab',
+        'aboutus_tab': 'aboutus_tab',
+        'news_tab': 'news_tab',
         'change_city': 'change_city',
         'slider': 'slider',
         'max_news_per_site': 100,
         'number_of_news_in_single_page': 10,
-        'timeout': 40,
+        'timeout': 5,
         'input_data2': {
             "data": [
                 { "priority": 1, "url": "http://www.cnbc.com/id/10000115/device/rss/rss.html", "type": "rss" },
@@ -34,6 +39,11 @@
                 { "priority": 29, "url": "http://www.jdsupra.com/resources/syndication/docsRSSfeed.aspx?ftype=RealEstate", "type": "rss" }
             ]
         },
+        'aboutus_data': {
+            "data": [
+                { "url": "http://www.proptiger.com/guide/blog?count=9&tag=home&sort=date-desc" }
+            ]
+        },
         'city': [
             "agra", "jaipur", "gurgaon",
             "ghaziabad", "pune", "mumbai",
@@ -44,7 +54,6 @@
             "karnataka", "kerala", "uttar pradesh",
             "other"
         ],
-        // 'city': ["delhi", "chandigarh", "pune", "mumbai", "noida", "ghaziabad", "bangalore", "gurgaon"],
         'state': [
             "haryana", "delhi", "punjab", "rajasthan", "maharashtra",
             "assam", "bihar", "goa", "gujarat", "himachal pradesh", "karnataka",

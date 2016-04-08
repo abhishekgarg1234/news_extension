@@ -1,7 +1,7 @@
 #feed {
     width: 376px;
     height: 445px;
-    overflow-y:scroll;
+    overflow-y: scroll;
     overflow-x: hidden;
 }
 
@@ -172,12 +172,47 @@
 }
 
 .news_tab {
-    width: 170px;
+    width: 120px;
     cursor: pointer;
+    height: 25px;
     border-right: double;
+    /*border-bottom: double;*/
 }
 
 .twitter_tab {
-    width: 170px;
+    width: 120px;
     cursor: pointer;
+    height: 25px;
+    border-right: double;
+    /*border-bottom: double;*/
+}
+
+.aboutus_tab {
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+    /*border-bottom: double;*/
+}
+
+.slider_p {
+    color: white;
+}
+
+#aboutus_feed {
+    width: 376px;
+    max-height: 445px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#twitter_feed {
+    width: 376px;
+    max-height: 445px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#tabs{
+    border-bottom: solid;
+    width:376px;
 }
