@@ -1,10 +1,5 @@
 (function(config, app) {
 
-
-    // var t = new Date();
-    // console.log("begin" + Number(t));
-
-
     app.initialBind();
 
     var time_out = 1000 * config.timeout;

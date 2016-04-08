@@ -44,7 +44,9 @@
                 var yql = x1 + encodeURIComponent('select * from html where url="' + _site + '"') + '&format=json';
                 return yql;
             } else if (format == "rss") {
+
                 var yql = x1 + encodeURIComponent('select * from rss where url="' + _site + ' "') + '&format=json';
+                // console.log(yql);
                 return yql;
             } else if (format == "single_news") {
                 var yql = x1 + encodeURIComponent('select * from html where url="' + _site + '"  and xpath="/html/head/*"  ') + '&format=json';
@@ -57,7 +59,9 @@
             var ans;
             var d = new Date();
             d = Number(d);
+
             var d2 = Date.parse(input_time);
+            // console.log("parse: " + d2);
             var diff = d - d2;
             diff = parseInt((diff / 1000) / 60);
             if (diff < 60) {
@@ -65,14 +69,14 @@
             } else if (diff >= 60 && diff < 1440) {
                 var min = diff % 60;
                 diff = parseInt(diff / 60);
-                // ans = diff + " hours " + min + "min ago";
                 ans = diff + " hours ago";
             } else if (diff >= 1440 && diff < 43200) {
                 var days = parseInt((diff / 60) / 24);
-                // console.log(input_time);
                 ans = days + " days ago";
             } else {
                 ans = input_time;
+                // input_time=input_time.toString();
+                // ans = input_time.substr(0, 24);
             }
 
             return ans;
@@ -326,11 +330,13 @@
                 description_div.setAttribute("class", "news_feed_description_div");
                 description_div.innerHTML = description_of_news;
             }
+
             var time_div = document.createElement("div");
             time_div.setAttribute("class", "news_feed_time_div");
             var time_span = document.createElement("span");
             time_span.setAttribute("class", "time_span_class");
             var changed_time_type = change_time_type_fn(news_feed_time);
+            // console.log(changed_time_type);
             var text = document.createTextNode(changed_time_type);
             time_span.appendChild(text);
 
@@ -359,7 +365,6 @@
             make_json_object: make_json_object,
             make_checkbox_form: make_checkbox_form,
             make_div: make_div
-
         };
 
     })(window.document);
