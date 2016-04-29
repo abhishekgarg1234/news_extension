@@ -9,27 +9,6 @@
         "default_icon": "icon.png"
     },
 
-    // "content_scripts": [{
-    //     "matches": [
-    //         "http://*/*"
-    //     ],
-    //     "js": ["contentscript.js"]
-    // }],
-
-    // "background": {
-    //     // "page": "index.html",
-    //     "scripts": ["js/jquery.min.js", "js/lazy_load.js", "js/config.js", "js/functions.js", "js/about.js", "js/app.js", "js/main.js"],
-    //     "persistent": true
-    // },
-
-
-
-    // "content_scripts": [{
-    //     "matches": ["*://*.stackoverflow.com/*"],
-    //     "js": ["content.js"]
-    // }],
-
-
     "permissions": [
         "storage",
         "activeTab",
@@ -41,20 +20,6 @@
         "http://*.twing.com/*"
 
     ],
-    // "content_security_policy": "script-src 'self' https://cdn.api.twitter.com; object-src 'self'",
-
-    // "content_security_policy": "script-src 'self' https://platform.twitter.com; object-src 'self'",
-    // "content_security_policy": "script-src 'self' https://syndication.twimg.com; object-src 'self'"
-
-    // "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'"
-
-
-    // "content_security_policy": "script-src 'self' https://platform.twitter.com https://cdn.api.twitter.com https://syndication.twimg.com; object-src 'self'"
-
 
     "content_security_policy": "script-src 'self' https://platform.twitter.com https://cdn.api.twitter.com https://cdn.syndication.twimg.com https://syndication.twimg.com https://syndication.twitter.com; object-src 'self'"
-        // "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
-
-
-
 }

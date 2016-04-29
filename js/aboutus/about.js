@@ -3,7 +3,7 @@
         var aboutus_feed_id = config.aboutus_feed;
         var aboutus_instance = document.getElementById(aboutus_feed_id);
 
-        var aboutus_input = config.aboutusData;
+        var aboutus_input = config.aboutus_data;
         $(aboutus_instance).addClass("aboutus_display");
 
         var render_aboutus = function() {
