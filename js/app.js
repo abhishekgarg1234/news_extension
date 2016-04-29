@@ -266,7 +266,7 @@
                         finalNewsData2[i].imageHref = "image/images2.jpg";
                     }
                     haveSomeNews = 1;
-                    $(feed_id_instance).append(viewUtils.makeDiv(finalNewsData2[i]));
+                    $(feed_id_instance).append(view.makeDiv(finalNewsData2[i]));
                 }
                 i++;
             }
@@ -283,7 +283,7 @@
                             finalNewsData2[i].imageHref = "image/images2.jpg";;
                         }
                         haveSomeNews = 1;
-                        $(feed_id_instance).append(viewUtils.makeDiv(finalNewsData2[i]));
+                        $(feed_id_instance).append(view.makeDiv(finalNewsData2[i]));
                     }
                     i++;
                 }
@@ -391,7 +391,7 @@
 
                 div.appendChild(span);
                 $(feed_id_instance).append(div);;
-                $(feed_id_instance).append(viewUtils.makeCheckboxForm());
+                $(feed_id_instance).append(view.makeCheckboxForm());
                 $(change_city_instance).hide();
                 $(".checkbox_class").on("change", function(event) {
                     if (event.target.attributes.getNamedItem("checked")) {
@@ -467,7 +467,7 @@
                     x = Date.parse(obj[i].time);
                 } else {}
                 if (utils.checkMatchTwoArrays(cityArr, obj[i].city)) {
-                    $(feed_id_instance).append(viewUtils.makeDiv(obj[i]));
+                    $(feed_id_instance).append(view.makeDiv(obj[i]));
                 }
                 i++;
             }
@@ -531,7 +531,7 @@
                                 if (settingsPageOpen == true) {} else {
                                     var cityArr = JSON.parse(localStorage.getItem("cities"));
                                     if (utils.checkMatchTwoArrays(cityArr, newNewsData[temp_i].city)) {
-                                        $(feed_id_instance).prepend(viewUtils.makeDiv(newNewsData[temp_i]));
+                                        $(feed_id_instance).prepend(view.makeDiv(newNewsData[temp_i]));
                                         checkForSlideDown = 1;
                                     }
                                 }

@@ -1,5 +1,5 @@
 (function(window) {
-    var viewUtils = (function(document) {
+    var view = (function(document) {
 
         var words_to_check_for_news = config.words_to_check;
         var cities_list = config.city;
@@ -174,5 +174,5 @@
 
     })(window.document);
 
-    window.viewUtils = viewUtils;
+    window.view = view;
 })(window);

@@ -23,7 +23,7 @@
                     newsObj.newsHref = data.data[key].guid;
                     newsObj.imageHref = data.data[key].primaryImageUrl;;
                     newsObj.time = new_d;
-                    var s = viewUtils.makeDiv(newsObj);
+                    var s = view.makeDiv(newsObj);
                     $(aboutus_instance).append(s);
                 }
                 $("img").unveil();
