@@ -3,7 +3,7 @@
         var aboutus_feed_id = config.aboutus_feed;
         var aboutus_instance = document.getElementById(aboutus_feed_id);
 
-        var aboutus_input = config.aboutus_data;
+        var aboutus_input = config.aboutusData;
         $(aboutus_instance).addClass("aboutus_display");
 
         var render_aboutus = function() {
@@ -23,7 +23,7 @@
                     newsObj.newsHref = data.data[key].guid;
                     newsObj.imageHref = data.data[key].primaryImageUrl;;
                     newsObj.time = new_d;
-                    var s = viewUtils.makeDiv(newsObj);
+                    var s = view.makeDiv(newsObj);
                     $(aboutus_instance).append(s);
                 }
                 $("img").unveil();

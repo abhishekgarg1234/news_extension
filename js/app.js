@@ -23,8 +23,7 @@
 
         var promiseArray = [];
 
-        var previous_saved_date;
-
+        var previous_saved_date = localStorage.getItem("previousDate");
         var finalNewsData = [],
             finalNewsData2 = [],
             tempNewsData = [],
@@ -458,14 +457,9 @@
 
             var i = 0;
             var x = Date.parse(obj[0].time);
-            previous_saved_date = obj[0].time;
+            // previous_saved_date = obj[0].time;
             for (var key in obj) {
                 var y = Date.parse(obj[i].time);
-                if (y > x) {
-                    console.log("problem");
-                    previous_saved_date = obj[i].time;
-                    x = Date.parse(obj[i].time);
-                } else {}
                 if (utils.checkMatchTwoArrays(cityArr, obj[i].city)) {
                     $(feed_id_instance).append(view.makeDiv(obj[i]));
                 }
@@ -548,10 +542,12 @@
                             }
 
                             Promise.all(promiseArray).then(function() {
-                                previous_saved_date = finalNewsData2[0].time;
+                                // previous_saved_date = finalNewsData2[0].time;
                                 var data = JSON.stringify(finalNewsData2);
                                 newNewsData = [];
                                 localStorage.setItem("data1", data);
+                                console.log(Date.parse(finalNewsData2[0].time));
+                                localStorage.setItem("previousDate", Date.parse(finalNewsData2[0].time));
                                 promiseArray = [];
                                 resolve("final");
                                 console.log("local storage changed");
@@ -583,6 +579,7 @@
                         Promise.all(promiseArray).then(function() {
                             console.log("done");
                             previous_saved_date = finalNewsData2[0].time;
+                            localStorage.setItem("previousDate", Date.parse(previous_saved_date));
                             $(change_city_instance).show();
                             var x = JSON.stringify(finalNewsData2);
                             localStorage.setItem("data1", x);
