@@ -112,7 +112,8 @@
 
                 if ((background_working == true) || (dataPresentInLocalStorage == true)) {
                     var x = Date.parse(newsObj.time);
-                    var y = Date.parse(previous_saved_date);
+                    var y=previous_saved_date;
+                    console.log(y);
                     if (x > y) {
                         noOfNewNews++;
                         console.log("got new news");
@@ -579,6 +580,9 @@
                         Promise.all(promiseArray).then(function() {
                             console.log("done");
                             previous_saved_date = finalNewsData2[0].time;
+                            for (var i = 0; i < finalNewsData2.length; i++) {
+                                console.log(finalNewsData2.time);
+                            }
                             localStorage.setItem("previousDate", Date.parse(previous_saved_date));
                             $(change_city_instance).show();
                             var x = JSON.stringify(finalNewsData2);
